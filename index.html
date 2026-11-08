@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a1119">
+<title>Housebets Sportsbook — Prototype</title>
+<meta name="description" content="Clickable prototype: sports list, live, competition view, match page, bet slip and my bets. Sample data only.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=37">
+</head>
+<body>
+<div class="app">
+  <header class="nav" id="nav"></header>
+  <aside class="side" id="side" aria-label="Sports"></aside>
+  <main class="main" id="main" role="main"></main>
+  <aside class="slip" id="slip" aria-label="Bet slip"></aside>
+</div>
+
+<nav class="bnav" id="bnav" aria-label="Bottom navigation"></nav>
+<div class="backdrop" id="backdrop" data-a="close-sheet"></div>
+<div class="backdrop mback" id="mbackdrop" data-a="close-menu"></div>
+
+<div class="slipbar" id="slipbar" data-a="open-sheet" role="button" tabindex="0" aria-label="Open bet slip">
+  <span class="rail" aria-hidden="true"></span>
+  <span class="cnt" id="bar-n">0</span>
+  <span class="txt">
+    <b id="bar-t">0 singles</b>
+    <span id="bar-s">No selections</span>
+  </span>
+  <span class="act">
+    <span class="ret" id="bar-r"></span>
+    <span class="go"><span id="bar-g">Open</span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg></span>
+  </span>
+</div>
+
+<div class="demo" id="demo"></div>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<script src="data.js?v=37"></script>
+<script src="app.js?v=37"></script>
+</body>
+</html>
